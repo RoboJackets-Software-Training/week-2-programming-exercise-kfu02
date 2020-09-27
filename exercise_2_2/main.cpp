@@ -6,10 +6,6 @@
 using namespace std;
 
 void generateComputerMove(Board &board, int &r_out, int &c_out) {
-
-
-
-
   static random_device rand_dev;
   static default_random_engine engine(rand_dev());
   static uniform_int_distribution< int> uniform_dist(0,2);
