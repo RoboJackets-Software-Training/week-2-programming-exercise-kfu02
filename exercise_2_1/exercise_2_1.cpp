@@ -21,14 +21,14 @@ int main() {
 
     // TODO write your code here
     // =========== START =========
-    y = applyConvolution(x, w, true);
-    y2 = applyConvolution(x, w, false);
+    y = applyConvolution(x, w, pack_with_zeros);
+    // y2 = applyConvolution(x, w, false);
 
-    // printVector("x", x);
-    // printVector("w", w);
+    printVector("x", x);
+    printVector("w", w);
 
     printVector(y);
-    printVector(y2);
+    // printVector(y2);
 
     // =========== END ===========
 
