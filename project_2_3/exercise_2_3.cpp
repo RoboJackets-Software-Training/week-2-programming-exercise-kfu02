@@ -28,9 +28,6 @@ int main() {
   std::string input;
   std::cin >> input;
 
-  std::cout << "input: " << input << std::endl;
-  std::cout << "output type: " << outType << std::endl;
-
   std::string inType = "d";
   if (input.rfind("b", 0) == 0) { // find backwards, starting at index 0, rfind rets index of substr if found, -1 if not
     inType = "b";
@@ -39,6 +36,9 @@ int main() {
     inType = "h";
     input.erase(0, 2);
   }
+
+  std::cout << "input: " << input << std::endl;
+  std::cout << "output type: " << outType << std::endl;
 
   std::cout << "result: ";
   if (inType == "b") {
@@ -62,7 +62,7 @@ int main() {
   }
 
   conv.addIOStats(inType, outType);
-  
+
   // done in destructor as requested
   // conv.printStats();
 }
